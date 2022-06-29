@@ -4,7 +4,7 @@
 #
 Name     : R-parallelly
 Version  : 1.32.0
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/parallelly_1.32.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/parallelly_1.32.0.tar.gz
 Summary  : Enhancing the 'parallel' Package
