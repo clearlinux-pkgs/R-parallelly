@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-parallelly
-Version  : 1.35.0
-Release  : 36
-URL      : https://cran.r-project.org/src/contrib/parallelly_1.35.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/parallelly_1.35.0.tar.gz
+Version  : 1.36.0
+Release  : 37
+URL      : https://cran.r-project.org/src/contrib/parallelly_1.36.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/parallelly_1.36.0.tar.gz
 Summary  : Enhancing the 'parallel' Package
 Group    : Development/Tools
 License  : LGPL-2.1+
@@ -23,17 +23,19 @@ BuildRequires : buildreq-R
 
 %prep
 %setup -q -n parallelly
-cd %{_builddir}/parallelly
+pushd ..
+cp -a parallelly buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679589387
+export SOURCE_DATE_EPOCH=1685645589
 
 %install
-export SOURCE_DATE_EPOCH=1679589387
+export SOURCE_DATE_EPOCH=1685645589
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -71,6 +73,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc . || :
 
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
