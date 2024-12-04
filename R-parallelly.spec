@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : R-parallelly
-Version  : 1.39.0
-Release  : 45
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.39.0.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.39.0.tar.gz
+Version  : 1.40.0
+Release  : 46
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.0.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.0.tar.gz
 Summary  : Enhancing the 'parallel' Package
 Group    : Development/Tools
 License  : LGPL-2.1+
@@ -20,9 +20,7 @@ BuildRequires : buildreq-R
 %define debug_package %{nil}
 
 %description
-<div id="badges"><!-- pkgdown markup -->
-<a href="https://CRAN.R-project.org/web/checks/check_results_parallelly.html"><img border="0" src="https://www.r-pkg.org/badges/version/parallelly" alt="CRAN check status"/></a> <a href="https://github.com/HenrikBengtsson/parallelly/actions?query=workflow%3AR-CMD-check"><img border="0" src="https://github.com/HenrikBengtsson/parallelly/actions/workflows/R-CMD-check.yaml/badge.svg?branch=develop" alt="R CMD check status"/></a> <a href="https://github.com/HenrikBengtsson/parallelly/actions?query=workflow%3Arevdepcheck-top"><img border="0" src="https://github.com/HenrikBengtsson/parallelly/actions/workflows/revdepcheck-top.yaml/badge.svg?branch=develop" alt="Top reverse-dependency checks status"/></a>    <a href="https://app.codecov.io/gh/HenrikBengtsson/parallelly"><img border="0" src="https://codecov.io/gh/HenrikBengtsson/parallelly/branch/develop/graph/badge.svg" alt="Coverage Status"/></a>
-</div>
+No detailed description available
 
 %package lib
 Summary: lib components for the R-parallelly package.
@@ -49,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1731647327
+export SOURCE_DATE_EPOCH=1733325788
 
 %install
-export SOURCE_DATE_EPOCH=1731647327
+export SOURCE_DATE_EPOCH=1733325788
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -107,12 +105,30 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/parallelly/Meta/links.rds
 /usr/lib64/R/library/parallelly/Meta/nsInfo.rds
 /usr/lib64/R/library/parallelly/Meta/package.rds
+/usr/lib64/R/library/parallelly/Meta/vignette.rds
 /usr/lib64/R/library/parallelly/NAMESPACE
 /usr/lib64/R/library/parallelly/NEWS.md
 /usr/lib64/R/library/parallelly/R/parallelly
 /usr/lib64/R/library/parallelly/R/parallelly.rdb
 /usr/lib64/R/library/parallelly/R/parallelly.rdx
 /usr/lib64/R/library/parallelly/WORDLIST
+/usr/lib64/R/library/parallelly/doc/index.html
+/usr/lib64/R/library/parallelly/doc/parallelly-01-intro.html
+/usr/lib64/R/library/parallelly/doc/parallelly-01-intro.md
+/usr/lib64/R/library/parallelly/doc/parallelly-10-local-workers.html
+/usr/lib64/R/library/parallelly/doc/parallelly-10-local-workers.md
+/usr/lib64/R/library/parallelly/doc/parallelly-12-remote-workers.html
+/usr/lib64/R/library/parallelly/doc/parallelly-12-remote-workers.md
+/usr/lib64/R/library/parallelly/doc/parallelly-15-cloud-workers.html
+/usr/lib64/R/library/parallelly/doc/parallelly-15-cloud-workers.md
+/usr/lib64/R/library/parallelly/doc/parallelly-17-hpc-workers.html
+/usr/lib64/R/library/parallelly/doc/parallelly-17-hpc-workers.md
+/usr/lib64/R/library/parallelly/doc/parallelly-20-limit-workers.html
+/usr/lib64/R/library/parallelly/doc/parallelly-20-limit-workers.md
+/usr/lib64/R/library/parallelly/doc/parallelly-21-container-workers.html
+/usr/lib64/R/library/parallelly/doc/parallelly-21-container-workers.md
+/usr/lib64/R/library/parallelly/doc/parallelly-22-wine-workers.html
+/usr/lib64/R/library/parallelly/doc/parallelly-22-wine-workers.md
 /usr/lib64/R/library/parallelly/help/AnIndex
 /usr/lib64/R/library/parallelly/help/aliases.rds
 /usr/lib64/R/library/parallelly/help/figures/lifecycle-maturing-blue.svg
@@ -122,6 +138,26 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/parallelly/help/paths.rds
 /usr/lib64/R/library/parallelly/html/00Index.html
 /usr/lib64/R/library/parallelly/html/R.css
+/usr/lib64/R/library/parallelly/test-data/cgroups1/c4-dev3.R
+/usr/lib64/R/library/parallelly/test-data/cgroups1/c4-dev3.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups1/c4-n39-4cores.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups1/c4-n4-4cores.R
+/usr/lib64/R/library/parallelly/test-data/cgroups1/posit-workbench.R
+/usr/lib64/R/library/parallelly/test-data/cgroups1/posit-workbench.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups2/dev1.R
+/usr/lib64/R/library/parallelly/test-data/cgroups2/dev1.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups2/dt1.R
+/usr/lib64/R/library/parallelly/test-data/cgroups2/dt1.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups2/log1.R
+/usr/lib64/R/library/parallelly/test-data/cgroups2/log1.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups2/pi-2021.R
+/usr/lib64/R/library/parallelly/test-data/cgroups2/pi-2021.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups2/posit.cloud-free.R
+/usr/lib64/R/library/parallelly/test-data/cgroups2/posit.cloud-free.tar.gz
+/usr/lib64/R/library/parallelly/test-data/cgroups2/x1.R
+/usr/lib64/R/library/parallelly/test-data/cgroups2/x1.tar.gz
+/usr/lib64/R/library/parallelly/test-data/no-cgroups/no-cgroups.R
+/usr/lib64/R/library/parallelly/test-data/no-cgroups/no-cgroups.tar.gz
 /usr/lib64/R/library/parallelly/tests/as.cluster.R
 /usr/lib64/R/library/parallelly/tests/availableCores.R
 /usr/lib64/R/library/parallelly/tests/availableWorkers.R
