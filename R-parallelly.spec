@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : R-parallelly
-Version  : 1.40.0
-Release  : 46
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.0.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.0.tar.gz
+Version  : 1.40.1
+Release  : 47
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.1.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.1.tar.gz
 Summary  : Enhancing the 'parallel' Package
 Group    : Development/Tools
 License  : LGPL-2.1+
@@ -47,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1733325788
+export SOURCE_DATE_EPOCH=1733397413
 
 %install
-export SOURCE_DATE_EPOCH=1733325788
+export SOURCE_DATE_EPOCH=1733397413
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
