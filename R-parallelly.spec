@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : R-parallelly
-Version  : 1.40.1
-Release  : 47
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.1.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.40.1.tar.gz
+Version  : 1.41.0
+Release  : 48
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.41.0.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.41.0.tar.gz
 Summary  : Enhancing the 'parallel' Package
 Group    : Development/Tools
 License  : LGPL-2.1+
@@ -47,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1733397413
+export SOURCE_DATE_EPOCH=1734589686
 
 %install
-export SOURCE_DATE_EPOCH=1733397413
+export SOURCE_DATE_EPOCH=1734589686
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -177,6 +177,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/parallelly/tests/options-and-envvars.R
 /usr/lib64/R/library/parallelly/tests/r_bug18119.R
 /usr/lib64/R/library/parallelly/tests/startup.R
+/usr/lib64/R/library/parallelly/tests/utils,cluster.R
 /usr/lib64/R/library/parallelly/tests/utils.R
 
 %files lib
