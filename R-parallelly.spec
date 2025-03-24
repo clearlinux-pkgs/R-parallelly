@@ -6,10 +6,10 @@
 # autospec commit: fbbd4e3
 #
 Name     : R-parallelly
-Version  : 1.42.0
-Release  : 50
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.42.0.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.42.0.tar.gz
+Version  : 1.43.0
+Release  : 51
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.43.0.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/parallelly_1.43.0.tar.gz
 Summary  : Enhancing the 'parallel' Package
 Group    : Development/Tools
 License  : LGPL-2.1+
@@ -47,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740096791
+export SOURCE_DATE_EPOCH=1742848926
 
 %install
-export SOURCE_DATE_EPOCH=1740096791
+export SOURCE_DATE_EPOCH=1742848926
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -162,27 +162,55 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/parallelly/test-data/mixed-cgroups/slurm.R
 /usr/lib64/R/library/parallelly/test-data/no-cgroups/no-cgroups.R
 /usr/lib64/R/library/parallelly/test-data/no-cgroups/no-cgroups.tar.gz
-/usr/lib64/R/library/parallelly/tests/as.cluster.R
-/usr/lib64/R/library/parallelly/tests/availableCores.R
-/usr/lib64/R/library/parallelly/tests/availableWorkers.R
-/usr/lib64/R/library/parallelly/tests/cgroups.R
-/usr/lib64/R/library/parallelly/tests/cpuLoad.R
-/usr/lib64/R/library/parallelly/tests/freeCores.R
-/usr/lib64/R/library/parallelly/tests/freePort.R
-/usr/lib64/R/library/parallelly/tests/incl/end.R
-/usr/lib64/R/library/parallelly/tests/incl/start,load-only.R
-/usr/lib64/R/library/parallelly/tests/incl/start.R
-/usr/lib64/R/library/parallelly/tests/isConnectionValid.R
-/usr/lib64/R/library/parallelly/tests/isForkedChild.R
-/usr/lib64/R/library/parallelly/tests/killNode.R
-/usr/lib64/R/library/parallelly/tests/makeClusterMPI.R
-/usr/lib64/R/library/parallelly/tests/makeClusterPSOCK.R
-/usr/lib64/R/library/parallelly/tests/makeClusterSequential.R
-/usr/lib64/R/library/parallelly/tests/options-and-envvars.R
-/usr/lib64/R/library/parallelly/tests/r_bug18119.R
-/usr/lib64/R/library/parallelly/tests/startup.R
-/usr/lib64/R/library/parallelly/tests/utils,cluster.R
-/usr/lib64/R/library/parallelly/tests/utils.R
+/usr/lib64/R/library/parallelly/testme/_epilogue/002.undo-state.R
+/usr/lib64/R/library/parallelly/testme/_epilogue/090.gc.R
+/usr/lib64/R/library/parallelly/testme/_epilogue/099.session_info.R
+/usr/lib64/R/library/parallelly/testme/_epilogue/999.detritus.R
+/usr/lib64/R/library/parallelly/testme/_prologue/001.load.R
+/usr/lib64/R/library/parallelly/testme/_prologue/002.record-state.R
+/usr/lib64/R/library/parallelly/testme/_prologue/030.imports.R
+/usr/lib64/R/library/parallelly/testme/_prologue/050.utils.R
+/usr/lib64/R/library/parallelly/testme/_prologue/090.context.R
+/usr/lib64/R/library/parallelly/testme/_prologue/090.options.R
+/usr/lib64/R/library/parallelly/testme/_prologue/091.envvars.R
+/usr/lib64/R/library/parallelly/testme/deploy.R
+/usr/lib64/R/library/parallelly/testme/run.R
+/usr/lib64/R/library/parallelly/testme/test-as.cluster.R
+/usr/lib64/R/library/parallelly/testme/test-availableCores.R
+/usr/lib64/R/library/parallelly/testme/test-availableWorkers.R
+/usr/lib64/R/library/parallelly/testme/test-cgroups.R
+/usr/lib64/R/library/parallelly/testme/test-cpuLoad.R
+/usr/lib64/R/library/parallelly/testme/test-freeCores.R
+/usr/lib64/R/library/parallelly/testme/test-freePort.R
+/usr/lib64/R/library/parallelly/testme/test-isConnectionValid.R
+/usr/lib64/R/library/parallelly/testme/test-isForkedChild.R
+/usr/lib64/R/library/parallelly/testme/test-killNode.R
+/usr/lib64/R/library/parallelly/testme/test-makeClusterMPI.R
+/usr/lib64/R/library/parallelly/testme/test-makeClusterPSOCK.R
+/usr/lib64/R/library/parallelly/testme/test-makeClusterSequential.R
+/usr/lib64/R/library/parallelly/testme/test-options-and-envvars.R
+/usr/lib64/R/library/parallelly/testme/test-r_bug18119.R
+/usr/lib64/R/library/parallelly/testme/test-startup.R
+/usr/lib64/R/library/parallelly/testme/test-utils,cluster.R
+/usr/lib64/R/library/parallelly/testme/test-utils.R
+/usr/lib64/R/library/parallelly/tests/test-as.cluster.R
+/usr/lib64/R/library/parallelly/tests/test-availableCores.R
+/usr/lib64/R/library/parallelly/tests/test-availableWorkers.R
+/usr/lib64/R/library/parallelly/tests/test-cgroups.R
+/usr/lib64/R/library/parallelly/tests/test-cpuLoad.R
+/usr/lib64/R/library/parallelly/tests/test-freeCores.R
+/usr/lib64/R/library/parallelly/tests/test-freePort.R
+/usr/lib64/R/library/parallelly/tests/test-isConnectionValid.R
+/usr/lib64/R/library/parallelly/tests/test-isForkedChild.R
+/usr/lib64/R/library/parallelly/tests/test-killNode.R
+/usr/lib64/R/library/parallelly/tests/test-makeClusterMPI.R
+/usr/lib64/R/library/parallelly/tests/test-makeClusterPSOCK.R
+/usr/lib64/R/library/parallelly/tests/test-makeClusterSequential.R
+/usr/lib64/R/library/parallelly/tests/test-options-and-envvars.R
+/usr/lib64/R/library/parallelly/tests/test-r_bug18119.R
+/usr/lib64/R/library/parallelly/tests/test-startup.R
+/usr/lib64/R/library/parallelly/tests/test-utils,cluster.R
+/usr/lib64/R/library/parallelly/tests/test-utils.R
 
 %files lib
 %defattr(-,root,root,-)
